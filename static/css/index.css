@@ -1,0 +1,92 @@
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+body {
+    background-color: #FAFAFA !important;   
+}
+
+.panelD {
+    margin: 20px -100px 60px -100px;
+}
+
+.panelD .panel-heading, .panelD .panel-footer {
+    background-color: #fff !important;
+}
+
+.panel-image img.panel-image-preview {
+    width: 100%;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.panel-heading ~ .panel-image img.panel-image-preview {
+	border-radius: 0px;
+}
+
+.panel-heading .list-inline {
+    margin: 0px 0px 0px -5px !important;
+}
+
+.panel-body {
+    display: block;
+}
+
+.panel-body blockquote {
+    margin: 10px 0 10px;    
+}
+
+.tagz {
+    margin: 15px 0px 0px;
+    display: block;    
+}
+
+.tagz a {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.panel-image ~ .panel-footer a {
+	padding: 0px 10px;
+	color: rgb(100, 100, 100);
+}
+
+.panel-image ~ .panel-footer span {
+    color: rgb(100, 100, 100);
+    font-size: 20px;    
+}
+
+.panel-footer .list-inline {
+    margin: 0 0 0 -15px !important;
+}
+
+.panel-image.hide-panel-body ~ .panel-body {
+	height: 0px;
+	padding: 0px;
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .level-line-up {
+        position: relative;
+        top: -4px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .level-line-up {
+        position: relative;
+        top: -4px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .level-line-up {
+        position: relative;
+        top: -4px;
+    }
+}
+
+

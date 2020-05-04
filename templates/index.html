@@ -1,0 +1,47 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}TimeLine{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>{{ user_name }} 's TimeLine</h1>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        {% for item in items %}
+        <div class="panel panel-default panelD">
+            <div class="panel-heading">
+                <ul class="list-inline">
+                    <li>Brand: {{ item.brand }}</li>
+                    <li class="pull-right" style="padding-right: 0;">Category: {{ item.category }}</li>
+                </ul>
+            </div>
+            <div class="panel-image">
+                <img src="https://s3.amazonaws.com/zozo-image-analyze/{{ item.image_id }}.jpg"
+                     class="panel-image-preview"/>
+            </div>
+            <div class="panel-footer">
+                <ul class="list-inline clearfix">
+                    <li class="col-sm-4 col-md-4 col-lg-4 level-line-up like-image" id="l-{{ item.image_id }}" >
+                        <span {% if item.flg == 2 %} style="color:dodgerblue" {% endif %}
+                              class="fa fa-thumbs-o-up"></span>
+                    </li>
+                    <li class="col-sm-4 col-md-4 col-lg-4 unlike-image pull-right" style="padding-right: 0;"
+                        id="u-{{ item.image_id }}">
+                        <span {% if item.flg == 1 %} style="color:dodgerblue" {% endif %}
+                              class="fa fa-bomb"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endfor %}    
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}
+
